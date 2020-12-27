@@ -1,4 +1,4 @@
-# SShNetIbmi
+# SShNetIbmi - .Net/.Net Core Class Library for Database and Program Access over SSH
 This class library is used to interface with existing IBM i database, program calls, CL commands, service programs and 
 data queues via the PASE based xmlservice-cli PASE command program or regular qsh/bash commands. qsh/bash commands can be used to interface with utilities such as the [IBM i db2util utility](https://github.com/IBM/ibmi-db2util)
 
