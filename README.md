@@ -10,7 +10,9 @@ This class should work with V7R2 and above of the OS400/IBM i operating system r
  
 # IBM i System Requirements:
  ● Requires xmlservice-cli package installed on the target system via yum packages (/QOpenSys/pkgs.bin/xmlservice-cli)
+ 
  ● Uses SSH for security
+ 
  ● The XMLSERVICE service program library QXMLSERV must also exist on the system, This library is installed as part of the IBM i operating system
  
 Note: For appropriate security you should configure your SSH users for appropriate security limitations in the IFS and for libraries and commands that may be accessed over an SSH connection to IBM i.
