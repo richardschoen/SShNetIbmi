@@ -1,19 +1,16 @@
 # SShNetIbmi - .Net/.Net Core Class Library for IBM i Database and Program Access over SSH
-This .Net Standard class library is used to interface with an IBM i system over SSH. Can interface to the IBM i database via SQL, program calls, CL commands, service programs and data queues via the PASE based xmlservice-cli PASE command program (part of itoolkit-utilities). Regular qsh/bash commands can also be run to interface with utilities such as the [IBM i db2util utility](https://github.com/IBM/ibmi-db2util) or programs written in languages such as Java, Python, PHP, Node.js and more.
-
 IBM i C# and VB.Net PASE, bash, SSH and XMLSERVICE Data Access Service Wrapper for .Net and .Net Core
 
-Return data is returned in a usable .Net DataTable format or you can process the raw XML responses yourself.
- 
-This class library should work with V7R2 and above of the OS400/IBM i operating system with the SSH server enabled. 
+This .Net Standard 2.0 class library is used to interface with an IBM i system over SSH. The library can interface to the IBM i database via SQL, program calls, CL commands, service programs and data queues via the PASE based xmlservice-cli PASE command program (part of itoolkit-utilities). Regular qsh/bash commands can also be run to interface with utilities such as the [IBM i db2util utility](https://github.com/IBM/ibmi-db2util) or programs written in languages such as Java, Python, PHP, Node.js and more.
 
-The XMLSERVICE related methods require XMLSERVICE and the IBM ACS Package xmlservice-cli installed in /QOpenSys/pkgs/bin. (part of itoolkit-utilities)
- 
+Query and program call return data is returned in .Net DataTable format or you can process the raw XML responses yourself.
  
 # IBM i System Requirements:
- ● Requires xmlservice-cli package installed on the target system via yum packages (/QOpenSys/pkgs.bin/xmlservice-cli)
+ ● XMLSERVICE methods requires xmlservice-cli package installed on the target system via yum packages (/QOpenSys/pkgs.bin/xmlservice-cli). Installs as part of part of itoolkit-utilities.
  
- ● Uses SSH for connectivity so SSH server must be running
+ ● Class library Uses SSH.Net for SSH connectivity so IBM i SSH server must be running. (V7R2 and above)
+ 
+ ```STRTCPSVR *SSHD```
  
  ● Set up user's SSH shell default to be bash. (See below)
  
