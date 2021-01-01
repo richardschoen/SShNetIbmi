@@ -17,7 +17,9 @@ The XMLSERVICE related methods require XMLSERVICE and the IBM ACS Package xmlser
  
  ● The XMLSERVICE service program library QXMLSERV must also exist on the system, This library is installed as part of the IBM i operating system
  
-Note: For appropriate security you should configure your SSH users for appropriate security limitations in the IFS and for libraries and commands that may be accessed over an SSH connection to IBM i.
+ ● Make sure the IBM i user you will be using for SSH access has /QOpenSys/pkgs/bin in the user search path ```export PATH=/QOpenSys/pkgs/bin:$PATH```
+ 
+**Note: For appropriate security you should configure your SSH users for appropriate security limitations in the IFS and for libraries and commands that may be accessed over an SSH connection to IBM i.**
 
 XMLSERVICE is now typically packaged on the IBMi in library: **QXMLSERV** as part of the operating system, but if you want to play with the code, here's the current Github location as of 1/23/2019
 
