@@ -13,16 +13,35 @@ The XMLSERVICE related methods require XMLSERVICE and the IBM ACS Package xmlser
 # IBM i System Requirements:
  ● Requires xmlservice-cli package installed on the target system via yum packages (/QOpenSys/pkgs.bin/xmlservice-cli)
  
- ● Uses SSH for security
+ ● Uses SSH for connectivity so SSH server must be running
+ 
+ ● Set up user's SSH shell default to be bash. (See below)
  
  ● The XMLSERVICE service program library QXMLSERV must also exist on the system, This library is installed as part of the IBM i operating system
  
- ● Make sure the IBM i user you will be using for SSH access has /QOpenSys/pkgs/bin in the user search path 
+ XMLSERVICE is now typically packaged on the IBMi in library: **QXMLSERV** as part of the operating system, but if you want to play with the code, here's the current Github location as of 1/23/2019
+
+https://github.com/IBM/xmlservice
+ 
+ ● Make sure the IBM i user you will be using for SSH access has /QOpenSys/pkgs/bin in the user search path. 
  
  ```export PATH=/QOpenSys/pkgs/bin:$PATH```
  
 **Note: For appropriate security you should configure your SSH users for appropriate security limitations in the IFS and for libraries and commands that may be accessed over an SSH connection to IBM i.**
 
-XMLSERVICE is now typically packaged on the IBMi in library: **QXMLSERV** as part of the operating system, but if you want to play with the code, here's the current Github location as of 1/23/2019
+# Set default shell to bash for SSH user
+Nowadays, the best way to do this is to using QSYS2.SET_PASE_SHELL_INFO() SQL procedure.
 
-https://github.com/IBM/xmlservice
+```
+-- set current user's shell
+CALL QSYS2.SET_PASE_SHELL_INFO('*CURRENT', '/QOpenSys/pkgs/bin/bash');
+
+-- set a specific user's shell
+-- (requires *SECADM special auth plus *USE and *OBJMGT to the user profile)
+CALL QSYS2.SET_PASE_SHELL_INFO('THATUSER', '/QOpenSys/pkgs/bin/bash');
+
+-- set the default shell which is returned for users that do not have
+-- (requires *SECADM special auth plus *USE and *OBJMGT to QSYS)
+CALL QSYS2.SET_PASE_SHELL_INFO('*DEFAULT', '/QOpenSys/pkgs/bin/bash');
+```
+https://stackoverflow.com/questions/23913957/set-default-pase-ibm-i-shell-for-individual-user
