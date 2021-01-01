@@ -4,7 +4,11 @@ IBM i C# and VB.Net PASE, bash, SSH and XMLSERVICE Data Access Service Wrapper f
 This .Net Standard 2.0 class library is used to interface with an IBM i system over SSH. The library can interface to the IBM i database via SQL, program calls, CL commands, service programs and data queues via the PASE based xmlservice-cli PASE command program (part of itoolkit-utilities). Regular qsh/bash commands can also be run to interface with utilities such as the [IBM i db2util utility](https://github.com/IBM/ibmi-db2util) or programs written in languages such as Java, Python, PHP, Node.js and more.
 
 Query and program call return data is returned in .Net DataTable format or you can process the raw XML responses yourself.
- 
+
+# Install from Nuget
+
+https://www.nuget.org/packages/IbmiXmlserviceStdSsh
+
 # IBM i System Requirements:
  ● XMLSERVICE methods requires xmlservice-cli package installed on the target system via yum packages (/QOpenSys/pkgs.bin/xmlservice-cli). Installs as part of part of itoolkit-utilities.
  
