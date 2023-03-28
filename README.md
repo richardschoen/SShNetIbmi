@@ -5,7 +5,7 @@ This .Net Standard 2.0 class library can be used to interface with an IBM i syst
 
 Query and program call return data is returned in .Net DataTable format, JSON, CSV or you can process the raw XML responses yourself.
 
-Class library can be installed to your .Net project from Nuget. https://www.nuget.org/packages/IbmiXmlserviceStdSsh   
+The IBMiXmlServiceStdSsh class library can be installed to your .Net project from Nuget. https://www.nuget.org/packages/IbmiXmlserviceStdSsh   
 
 
 ```Commercial .Net development and product support can be purchased through MobiGoGo LLC``` (http://www.mobigogo.net)
