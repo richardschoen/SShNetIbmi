@@ -37,7 +37,7 @@ https://github.com/IBM/xmlservice
  
  ```export PATH=/QOpenSys/pkgs/bin:$PATH```
  
-**Note: For appropriate security you should configure your SSH users for appropriate security limitations in the IFS and for libraries and commands that may be accessed over an SSH connection to IBM i.**
+❗ For appropriate security you should configure your SSH users for appropriate security limitations in the IFS and for libraries and commands that may be accessed over an SSH connection to IBM i.**
 
 # Set default shell to bash for SSH user
 Nowadays, the best way to do this is to using QSYS2.SET_PASE_SHELL_INFO() SQL procedure from your favorite SQL tool or STRSQL
