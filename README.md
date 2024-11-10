@@ -1,12 +1,15 @@
-# SShNetIbmi/IbmiXmlServiceStdSsh - .Net/.Net Core Class Library for IBM i Database and Program Access over SSH
-IBM i C# and VB.Net PASE, bash, SSH and XMLSERVICE Data Access Service Wrapper for .Net and .Net Core. Provide IBM i SSH connectivity to your IBM i apps.
+# .Net Framework/.Net Core Class Library for IBM i - AS/400 Database and Program Access over SSH
+SShNetIbmi/IbmiXmlServiceStdSsh is a .Net Standard 2.0 class library for accessing IBM i system services via SSH from .Net Framework 4.6.2 and above as well as .Net Core 2.0 and above.  
 
-This .Net Standard 2.0 class library can be used to interface with an IBM i system over SSH. The library can interface to the IBM i database via SQL, program calls, CL commands, service programs and data queues via the PASE based ```xmlservice-cli``` command line program (part of open source package ```itoolkit-utilities```). Regular qsh/bash commands can also be run to interface with utilities such as the [IBM i db2util utility](https://github.com/IBM/ibmi-db2util) or programs written in languages such as Java, Python, PHP, Node.js and more.
+.Net applications can access PASE, QShell, bash, SSH and XMLSERVICE functionality using a secure SSH system connection via user/password or SSH private key.
 
-Query and program call return data is returned in .Net DataTable format, JSON, CSV or you can process the raw XML responses yourself.
+The class library can be used to interface with an IBM i system over SSH. The library can interface to the IBM i database via SQL, program calls, CL commands, service programs and data queues via the PASE based ```xmlservice-cli``` command line program (part of open source package ```itoolkit-utilities```).    
+
+Regular qsh/bash commands can also be run to interface with utilities such as the [IBM i db2util utility](https://github.com/IBM/ibmi-db2util) or programs written in languages such as Java, Python, PHP, Node.js and more.
+
+Query and program call return data is returned in .Net DataTable format, JSON, CSV or you can process the raw XMLSERVICE responses yourself.
 
 The IBMiXmlServiceStdSsh class library can be installed to your .Net project from Nuget. https://www.nuget.org/packages/IbmiXmlserviceStdSsh   
-
 
 ```Commercial .Net development and product support can be purchased through MobiGoGo LLC``` (http://www.mobigogo.net)
 
@@ -15,17 +18,18 @@ The IBMiXmlServiceStdSsh class library can be installed to your .Net project fro
 https://www.nuget.org/packages/IbmiXmlserviceStdSsh
 
 # IBM i System Requirements:
- ● XMLSERVICE methods requires ```xmlservice-cli``` package installed on the target system via yum packages (/QOpenSys/pkgs.bin/xmlservice-cli). Installs as part of part of ```itoolkit-utilities```.
+ ● XMLSERVICE methods require the ```xmlservice-cli``` package installed on the target system via yum packages (/QOpenSys/pkgs.bin/xmlservice-cli). Installs as part of part of the open source ```itoolkit-utilities```.
  
- ● Class library Uses ```SSH.Net``` for SSH connectivity so IBM i SSH server must be running. (V7R2 and above)
- 
+ ● The class library Uses ```SSH.Net``` for SSH connectivity so IBM i SSH server must be running. (V7R2 and above)
+
+ Starting your SSH server   
  ```STRTCPSVR *SSHD```
  
  ● Set up user's SSH shell default to be ```bash```. (See below)
  
- ● The ```XMLSERVICE``` service program library ```QXMLSERV``` must also exist on the system, This library is installed as part of the IBM i operating system
+ ● The ```XMLSERVICE``` service program library ```QXMLSERV``` must also exist on the system, This library is installed as part of the IBM i operating system.
  
- XMLSERVICE is now typically packaged on the IBMi in library: ```QXMLSERV``` as part of the operating system, but if you want to play with the code, here's the current Github location as of 1/23/2019
+XMLSERVICE is typically packaged on the IBMi in library: ```QXMLSERV``` as part of the operating system, but if you want to play with the code, here's the current Github location as of 1/23/2019    
 
 https://github.com/IBM/xmlservice
  
