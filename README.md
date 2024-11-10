@@ -1,9 +1,9 @@
 # .Net Framework/.Net Core Class Library for IBM i - AS/400 Database and Program Access over SSH
 SShNetIbmi/IbmiXmlServiceStdSsh is a .Net Standard 2.0 class library for accessing IBM i system services via SSH from .Net Framework 4.6.2 and above as well as .Net Core 2.0 and above.  
 
-.Net applications can access PASE, QShell, bash, SSH and XMLSERVICE functionality using a secure SSH system connection via user/password or SSH private key.
+.Net applications can access PASE, QShell, bash, SSH and XMLSERVICE functionality using a secure SSH system connection via user/password or SSH private key authentication.
 
-The class library can be used to interface with an IBM i system over SSH. The library can interface to the IBM i database via SQL, program calls, CL commands, service programs and data queues via the PASE based ```xmlservice-cli``` command line program (part of open source package ```itoolkit-utilities```).    
+The class library can be used to connect with an IBM i system over SSH. The library can interface to the IBM i database via SQL, program calls, CL commands, service programs and data queues via the PASE based ```xmlservice-cli``` command line program (part of open source package ```itoolkit-utilities```).    
 
 Regular qsh/bash commands can also be run to interface with utilities such as the [IBM i db2util utility](https://github.com/IBM/ibmi-db2util) or programs written in languages such as Java, Python, PHP, Node.js and more.
 
